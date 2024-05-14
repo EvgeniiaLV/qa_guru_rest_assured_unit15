@@ -52,8 +52,7 @@ public class ReqresHomeworkTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Verify user info data received using method GET. " +
-            "!!! There is an error in the text field!!!")
+    @DisplayName("Verify user info data received using method GET")
     void successfulSingleUserGetTest() {
         given()
                 .log().uri()
@@ -68,7 +67,7 @@ public class ReqresHomeworkTests extends TestBase {
                 .body("data.last_name", is("Weaver"))
                 .body("data.avatar", is("https://reqres.in/img/faces/2-image.jpg"))
                 .body("support.url", is("https://reqres.in/#support-heading"))
-                .body("text", is("To keep ReqRes free, contributions towards server costs are appreciated!"));
+                .body("support.text", is("To keep ReqRes free, contributions towards server costs are appreciated!"));
     }
 
     @Test
